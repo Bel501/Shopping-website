@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  --color-obsidian: #09090b;
+  --color-carbon: #111114;
+  --color-ash: #18181b;
+  --color-bone: #f4f4f5;
+  --color-titanium: #a1a1aa;
+  --color-volt: #d4ff00;
+
+  --font-display: "Outfit", system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@layer base {
+  html {
+    background-color: #09090b;
+    color: #f4f4f5;
+    font-family: var(--font-sans);
+    overflow-x: clip;
+  }
+
+  body {
+    background-color: #09090b;
+    color: #f4f4f5;
+    overflow-x: clip;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Hide default pointer on desktop when custom cursor is active */
+@media (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  body.custom-cursor-enabled,
+  body.custom-cursor-enabled * {
+    cursor: none !important;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d4ff00;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+}

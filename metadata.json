@@ -1,0 +1,8 @@
+{
+  "name": "VÉLOX — Architectural Performance Footwear",
+  "description": "Interactive 3D e-commerce flagship for VÉLOX architectural performance sneakers featuring scroll-driven WebGL storytelling, real-time PBR material customization, and smooth Lenis choreography.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
